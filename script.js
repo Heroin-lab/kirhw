@@ -177,16 +177,31 @@
 // Задание 5 \\
 // Посчитать сумму цифр заданого числа
 
-var num = 5;
-var sum = 0;
+// var a = 999;
+// var b = 0;
 
-for(var i = 1; i <= num; i++){
-    sum+=i;
-}
-
-console.log(sum)
+// function sum(str) {
+//     c = String(str);
+//     for (var i = 0; i < c.length; i++) {
+//         b += c[i]*1;
+//     }
+//     console.log(b);
+// }
+// sum(a);
 
 
 
 // Задание 6 \\
 // Вывести число, которое является зеркальным отображением последовательности цифр заданного числа, например, задано число 123, вывести 321.
+
+// var a = 1234;
+// var b = '', c = '';
+
+// function revers(str) {
+//     c = String(str);
+//     for (var i = 0; i < c.length; i++) {
+//         b += c[c.length -1 -i]
+//     }
+//     console.log(parseInt(b));
+// }
+// revers(a);
