@@ -340,19 +340,95 @@
 // Задание 8 \\
 // Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2
 
-var array = [1, 2, 3, 4, 5, 6, 7, 8,]; // Работает даже если массив не делится на две части
+// var array = [1, 2, 3, 4, 5, 6, 7, 8,]; // Работает даже если массив не делится на две части
 
-function halfRevers(arr) {
-    buffer1 = [];
-    buffer2 = [];
-    for(var i = 0; i < arr.length; i++){
-        if(i < arr.length/2){
-            buffer2[i] = arr[i];
-        } else {
-            buffer1[i-(Math.round(arr.length/2))] = arr[i];
-        }
-    }
-    var output = [...buffer1, ...buffer2];
-    console.log(output);
-}
-halfRevers(array);
+// function halfRevers(arr) {
+//     buffer1 = [];
+//     buffer2 = [];
+//     for(var i = 0; i < arr.length; i++){
+//         if(i < arr.length/2){
+//             buffer2[i] = arr[i];
+//         } else {
+//             buffer1[i-(Math.round(arr.length/2))] = arr[i];
+//         }
+//     }
+//     var output = [...buffer1, ...buffer2];
+//     console.log(output);
+// }
+// halfRevers(array);
+
+
+// Задание 9 \\
+// Отсортировать массив (пузырьком (Bubble), выбором (Select), вставками (Insert))
+
+// var array = [10, 2, 5, 22, 8, 7, 12,];
+// var swapper;
+
+// function bubbleSort(arr) {
+//     swapper = false;
+//     var end = arr.length -1;
+//     for(var i = 0; i < arr.length; i++){
+//         if(arr[i] > arr[i+1]){
+//             swapper = true;
+//             var x = arr[i];
+//             arr[i] = arr[i+1];
+//             arr[i+1] = x; 
+//         }
+//     }
+//     end--;
+// }
+
+// do {
+//     bubbleSort(array); 
+// }   while(swapper);
+
+// console.log(array);
+
+
+// Select Sort \\
+
+// var array = [2, 5, 6, 213, 1, 4, 10, 21, 12, -1,];
+
+// function selectSort(arr) {
+//     for(var i = 0; i < arr.length -1; i++){
+//         var minIndex = i;
+//         for(var j = i + 1; j < arr.length; j++){
+//             if (arr[j] < arr[minIndex]){
+//                 minIndex = j;
+//             }
+//         }
+//         var x = arr[i];
+//         arr[i] = arr[minIndex];
+//         arr[minIndex] = x;
+//     }
+//     console.log(arr);
+// }
+
+// selectSort(array);
+
+
+// Insert Sort \\
+
+// var array = [2, 1, 12, 1513, 2234, 123, 23, 4, 6, 3, 1];
+
+// function insertSort(arr) {
+//     for (var i = 1; i < arr.length; i++){
+//         for(var j = i; j > 0; j--){
+//             if (arr[j] < arr[j-1]){
+//                 var x = arr[j];
+//                 arr[j] = arr[j-1];
+//                 arr[j-1] = x;
+//             } else {
+//                 break;
+//             }
+//         }
+//     }
+//     console.log(arr);
+// }
+
+// insertSort(array);
+
+
+
+//\\
+//
