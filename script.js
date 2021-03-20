@@ -430,5 +430,89 @@
 
 
 
-//\\
-//
+// Блок 4\\
+// Задание 1 
+// Получить строковое название дня недели по номеру дня. 
+
+// var dayNumber = 7;
+// var dayName = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+// console.log(dayName[dayNumber - 1]);
+
+// OR
+
+// var dayNumber = 2;
+
+// switch (dayNumber) {
+//     case 1:
+//         console.log('Monday');
+//         break;
+//     case 2:
+//         console.log('Tuesday');
+//         break;
+//     case 3:
+//         console.log('Wednesday');
+//         break;
+//     case 4:
+//         console.log('Thursday');
+//         break;
+//     case 5:
+//         console.log('Friday');
+//         break;
+//     case 6:
+//         console.log('Saturday');
+//         break;
+//     case 7:
+//         console.log('Sunday');
+//         break;
+
+//     default:
+//         console.log('Day name with this number is not exist')
+//         break;
+// }
+
+
+// Задание 2\\
+// Найти расстояние между двумя точками в двухмерном декартовом пространстве.
+
+
+
+// Задание 3 \\
+// Вводим число(0-999), получаем строку с прописью числа.
+
+// var arrHundreds = ['Сто ', 'Двести ', 'Триста ', 'Четыреста ', 'Пятьсот ', 'Шестьсот ', 'Семьсот ', 'Восемьсот ', 'Девятьсот ',];
+// var arrDecade = ['Двадцать ', 'Тридцать ', 'Сорок ', 'Пятьдесят ', 'Шестьдесят ', 'Семьдесят ', 'Восемьдесят ', 'Девяносто '];
+// var arrUnits = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять', 'Десять', 'Одинадцать', 
+//                 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семнадцать', 'Восемнадцать', 'Девятнадцать',];
+
+// var number = 839;
+
+// function callName(y) {
+//     if (y < 0 || y > 999){
+//         console.log('Input number is incorrect, try another one')
+//     } else {
+//         workGear(number);
+//     }
+// }
+
+// function workGear(x) {
+//     var temp = String(x);
+//     var check = '';
+//     var point = false;
+//     for (var i = 0; i < 3; i++){
+//         if (i < 1) {
+//         var j = temp[i];
+//         var sum = arrHundreds[j-1];
+//         } else if (temp[i] == 1 && point === false) {
+//             point = true;
+//             check = temp[i+1]*1;
+//             sum += arrUnits[check+9];
+//         } else if (i === 1){
+//             sum += arrDecade[temp[i]-2];
+//         } else if (point === false){
+//             sum += arrUnits[temp[i]-1]
+//         }
+//     }
+//     console.log(sum);
+// }
+// callName(number);
