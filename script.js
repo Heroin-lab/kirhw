@@ -340,19 +340,19 @@
 // Задание 8 \\
 // Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2
 
-// var array = [1, 2, 3, 4, 5, 6, 7, 8,];
+var array = [1, 2, 3, 4, 5, 6, 7, 8,]; // Работает даже если массив не делится на две части
 
-// function halfRevers(arr) {
-//     buffer1 = [];
-//     buffer2 = [];
-//     for(var i = 0; i < arr.length; i++){
-//         if(i < arr.length/2){
-//             buffer2[i] = arr[i];
-//         } else {
-//             buffer1[i-(arr.length/2)] = arr[i];
-//         }
-//     }
-//     var output = [...buffer1, ...buffer2];
-//     console.log(output);
-// }
-// halfRevers(array);
+function halfRevers(arr) {
+    buffer1 = [];
+    buffer2 = [];
+    for(var i = 0; i < arr.length; i++){
+        if(i < arr.length/2){
+            buffer2[i] = arr[i];
+        } else {
+            buffer1[i-(Math.round(arr.length/2))] = arr[i];
+        }
+    }
+    var output = [...buffer1, ...buffer2];
+    console.log(output);
+}
+halfRevers(array);
