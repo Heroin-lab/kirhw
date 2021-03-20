@@ -205,3 +205,154 @@
 //     console.log(parseInt(b));
 // }
 // revers(a);
+
+
+
+// Блок 3 \\
+// Одномерные массивы
+// Задание 1 Найти минимальный элемент массива
+
+// var arr = [1, 2, -3, -4];
+
+// function lower(ray) {
+//     zero = ray[0];
+//     for(i = 1; i < ray.length; i++){
+//         if (zero > ray[i]) {
+//             zero = ray[i];
+//         }
+//     }
+//     console.log(zero);
+// }
+
+// lower(arr);
+
+
+
+// Задание 2 \\
+// Найти максимальный элемент массива
+
+// var arr = [1, -23, -32, 3];
+
+// function high(ray) {
+//     first = ray[0];
+//     for(i = 1; i < ray.length; i++){
+//         if (first < ray[i]) {
+//             first = ray[i];
+//         }
+//     }
+//     console.log(first);
+// }
+
+// high(arr);
+
+
+
+// Задание 3 \\
+// Найти индекс минимального элемента массива
+
+// var arr = [1, -4, -344, -3];
+
+// function lowIndex(ray) {
+//     first = ray[0];
+//     index = 0;
+//     for(i = 1; i < ray.length; i++){
+//         if (first > ray[i]) {
+//             first = ray[i];
+//             index = i;
+//         }
+//     }
+//     console.log(index);
+// }
+// lowIndex(arr);
+
+
+// Задание 4 \\
+// Найти индекс максимального элемента массива
+
+// var arr = [1, -4, -344, 3];
+
+// function highIndex(ray) {
+//     first = ray[0];
+//     index = 0;
+//     for(i = 1; i < ray.length; i++){
+//         if (first < ray[i]) {
+//             first = ray[i];
+//             index = i;
+//         }
+//     }
+//     console.log(index);
+// }
+// highIndex(arr);
+
+
+// Задание 5 \\
+// Посчитать сумму элементов массива с нечетными индексами
+
+// var array = [4, 1, 3, 1, 5, 1, 7,];
+// var result = 0;
+
+// function oddIndex(arr) {
+//     for(var i = 0; i < arr.length; i++){
+//         if (i % 2 !== 0) {
+//             result += arr[i];
+//         }
+//     }
+//     console.log(result);
+// }
+
+// oddIndex(array);
+
+
+// Задание 6 \\
+// Сделать реверс массива (массив в обратно направлении)
+
+// var array = [1, 2, 3, 4, 5, 6,];
+// var secArr = [];
+
+// function arrRevers(arr) {
+//     for(var i = 0; i < arr.length; i++){
+//         secArr[i] = arr[arr.length -i -1]
+//     }
+//     console.log(secArr);
+// }
+
+// arrRevers(array);
+
+
+// Задание 7 \\
+// Посчитать количество нечетных элементов массива
+
+// var array = [1, 2, 3, 4, 5, 6, 7,];
+
+// function oddNumbers(arr) {
+//     var sum = 0;
+//     for(var i = 0; i < arr.length; i++){
+//         if(arr[i] % 2 !== 0){
+//             sum += arr[i];
+//         }
+//     }
+//     console.log(sum);
+// }
+
+// oddNumbers(array);
+
+
+// Задание 8 \\
+// Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2
+
+// var array = [1, 2, 3, 4, 5, 6, 7, 8,];
+
+// function halfRevers(arr) {
+//     buffer1 = [];
+//     buffer2 = [];
+//     for(var i = 0; i < arr.length; i++){
+//         if(i < arr.length/2){
+//             buffer2[i] = arr[i];
+//         } else {
+//             buffer1[i-(arr.length/2)] = arr[i];
+//         }
+//     }
+//     var output = [...buffer1, ...buffer2];
+//     console.log(output);
+// }
+// halfRevers(array);
