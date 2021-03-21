@@ -515,4 +515,197 @@
 //     }
 //     console.log(sum);
 // }
-// callName(number);
+// callName(number);\
+
+
+// Задание 4 \\
+// Вводим строку, которая содержит число, написанное прописью (0-999). Получить само число
+
+// var str = 'двести сорок пять';
+
+// function strDecrypt(string) {
+//     string += ' ';
+//     var sum = '';
+//     var buffer = '', buffer2 = '', buffer3 = '';
+//     var num = '';
+//     var counter = 0;
+//     for (var i = 0; i < string.length; i++) {
+//         if (string[i] !== ' '){
+//             sum += string[i]; 
+//         } else if (buffer === '') {
+//             counter += 1;
+//             buffer = sum;
+//             sum = '';
+//         } else if (buffer2 === ''){
+//             buffer2 = sum;
+//             sum = '';
+//             counter += 1;
+//         } else {
+//             counter += 1;
+//         }
+//     }
+//     if (counter === 2){
+//         sum = buffer2;
+//         buffer2 = buffer;
+//     } else{}
+//     switch (buffer) {
+//         case 'сто':
+//             num += 1;
+//             break;
+//         case 'двести':
+//             num += 2;
+//             break;
+//         case 'триста':
+//             num += 3;
+//             break;
+//         case 'четыреста':
+//             num += 4;
+//             break;
+//         case 'пятьсот':
+//             num += 5;
+//             break;
+//         case 'шестьсот':
+//             num += 6;
+//             break;
+//         case 'семьсот':
+//             num += 7;
+//             break;
+//         case 'восемьсот':
+//             num += 8;
+//             break;
+//         case 'девятьсот':
+//             num += 9;
+//             break;    
+//         default:
+//             break;
+//     }
+//     switch (buffer2) {
+//         case 'одинадцать':
+//             num += 11
+//             break;
+//         case 'двенадцать':
+//             num += 12
+//             break;
+//         case 'тринадцать':
+//             num += 13
+//             break;
+//         case 'четырнадцать':
+//             num += 14
+//             break;
+//         case 'пятнадцать':
+//             num += 15
+//             break;
+//         case 'шестнадцать':
+//             num += 16
+//             break;
+//         case 'семнадцать':
+//             num += 17
+//             break;
+//         case 'восемнадцать':
+//             num += 18
+//             break;
+//         case 'девятнадцать':
+//             num += 19
+//             break;
+//         case 'десять':
+//             num += 1
+//             buffer3 += 0;
+//             break;
+//         case 'двадцать':
+//             num += 2
+//             buffer3 += 0;
+//             break;
+//         case 'тридцать':
+//             num += 3
+//             buffer3 += 0;
+//             break;
+//         case 'сорок':
+//             num += 4
+//             buffer3 += 0;
+//             break;
+//         case 'пятьдесят':
+//             num += 5
+//             buffer3 += 0;
+//             break;
+//         case 'шестьдесят':
+//             num += 6
+//             buffer3 += 0;
+//             break;
+//         case 'семьдесят':
+//             num += 7
+//             buffer3 += 0;
+//             break;
+//         case 'восемьдесят':
+//             num += 8
+//             buffer3 += 0;
+//             break;
+//         case 'девяносто':
+//             num += 9
+//             buffer3 += 0;
+//             break;
+//         case 'один':
+//             num += 01;
+//             break;
+//         case 'два':
+//             num += 02;
+//             break;
+//         case 'три':
+//             num += 03;
+//             break;
+//         case 'четыре':
+//             num += 04;
+//             break;
+//         case 'пять':
+//             num += 05;
+//             break;
+//         case 'шесть':
+//             num += 06;
+//             break;
+//         case 'семь':
+//             num += 07;
+//             break;
+//         case 'восемь':
+//             num += 08;
+//             break;
+//         case 'девять':
+//             num += 09;
+//             break;
+//         default:
+//             num += '00';
+//             break;
+//     }
+//     switch (sum) {
+//         case 'один':
+//             num += 1;
+//             break;
+//         case 'два':
+//             num += 2;
+//             break;
+//         case 'три':
+//             num += 3;
+//             break;
+//         case 'четыре':
+//             num += 4;
+//             break;
+//         case 'пять':
+//             num += 5;
+//             break;
+//         case 'шесть':
+//             num += 6;
+//             break;
+//         case 'семь':
+//             num += 7;
+//             break;
+//         case 'восемь':
+//             num += 8;
+//             break;
+//         case 'девять':
+//             num += 9;
+//             break;
+//         default:
+//             num += buffer3;
+//             break;
+//     }
+//     console.log(num*1);
+// }
+// strDecrypt(str);
