@@ -28,24 +28,25 @@ var arr = [
 //             array[i][k] = '*';
 //         }
 //     }
-
+//     completer(arr);
+//     console.log(arr);     
 // }
 // fillAll(arr);
 
 // 2 task \\
 
 // function fillSquare(array) {
-    // for (var i = 0; i < 7; i++){
-    //     for (var k = 0; k < 7; k++){
-    //         if (i === 6){
-    //             array[i][k] = '*';
-    //             array[k][i] = '*';
-    //         } else if (i === 0){
-    //             array[i][k] = '*';
-    //             array[k][i] = '*';
-    //         }
-    //     }
-    // }
+//     for (var i = 0; i < array.length; i++){
+//         for (var k = 0; k < array.length; k++){
+//             if (i === 6){
+//                 array[i][k] = '*';
+//                 array[k][i] = '*';
+//             } else if (i === 0){
+//                 array[i][k] = '*';
+//                 array[k][i] = '*';
+//             }
+//         }
+//     }
 //     completer(arr);
 //     console.log(arr);   
 // }
@@ -55,10 +56,10 @@ var arr = [
 
 // function fillTriangle1(array) {
 //     counter = 6;
-//     for (var i = 0; i < 7; i++){
+//     for (var i = 0; i < array.length; i++){
 //         array[i][counter] = '*';
 //         counter--;
-//         for (var k = 0; k < 7; k++){
+//         for (var k = 0; k < array.length; k++){
 //             if (i === 0){
 //                 array[i][k] = '*';
 //                 array[k][i] = '*';
@@ -74,9 +75,9 @@ var arr = [
 // 4 task \\
 
 // function fillTriangle2(array) {
-//     for (var i = 0; i < 7; i++){
+//     for (var i = 0; i < array.length; i++){
 //         array[i][i] = '*';
-//         for (var k = 0; k < 7; k++){
+//         for (var k = 0; k < array.length; k++){
 //             if (i === 0){
 //                 array[k][i] = '*';
 //             } else if (i === 6){
@@ -93,10 +94,10 @@ var arr = [
 
 // function fillTriangle3(array) {
 //     counter = 6;
-//     for (var i = 0; i < 7; i++){
+//     for (var i = 0; i < array.length; i++){
 //         array[i][counter] = '*';
 //         counter--;
-//         for (var k = 0; k < 7; k++){
+//         for (var k = 0; k < array.length; k++){
 //             if (i === 6){
 //                 array[i][k] = '*';
 //                 array[k][i] = '*';
@@ -111,9 +112,9 @@ var arr = [
 // 6 task \\
 
 // function fillTriangle4(array) {
-//     for (var i = 0; i < 7; i++){
+//     for (var i = 0; i < array.length; i++){
 //         array[i][i] = '*';
-//         for (var k = 0; k < 7; k++){
+//         for (var k = 0; k < array.length; k++){
 //             if (i === 0){
 //                 array[i][k] = '*';
 //             } else if (i === 6){
@@ -130,7 +131,7 @@ var arr = [
 
 // function fillCross(array) {
 //     k = 6;
-//     for (var i = 0; i < 7; i++){
+//     for (var i = 0; i < array.length; i++){
 //         array[i][i] = '*';
 //         array[i][k] = '*'
 //         k--;
@@ -144,12 +145,12 @@ var arr = [
 
 // function fillTriangleDown(array) {
 //     k = 6;
-//     for (var i = 0; i < 4; i++){
+//     for (var i = 0; i < array.length/2; i++){
 //         array[i][i] = '*';
 //         array[i][k] = '*'
 //         k--;
 //     }
-//     for (var k = 0; k < 7; k++){
+//     for (var k = 0; k < array.length; k++){
 //         array[0][k] = '*';
 //     }
 //     completer(arr);
@@ -159,17 +160,17 @@ var arr = [
 
 // 9 task \\
 
-// function fillCross(array) {
-//     k = 0;
-//     for (var i = 6; i > 2; i--){
-//         array[i][i] = '*';
-//         array[i][k] = '*'
-//         k++;
-//     }
-//     for (var k = 0; k < 7; k++){
-//         array[6][k] = '*';
-//     }
-//     completer(arr);
-//     console.log(arr);  
-// }
-// fillCross(arr);
+function fillCross(array) {
+    k = 0;
+    for (var i = array.length-1; i > (array.length/2)-1; i--){
+        array[i][i] = '*';
+        array[i][k] = '*'
+        k++;
+    }
+    for (var k = 0; k < array.length; k++){
+        array[array.length-1][k] = '*';
+    }
+    completer(arr);
+    console.log(arr);  
+}
+fillCross(arr);
