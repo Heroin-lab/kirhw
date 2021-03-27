@@ -522,7 +522,7 @@
 //     }
 //     console.log(sum);
 // }
-// callName(number);\
+// callName(number);
 
 
 // Задание 4 \\
