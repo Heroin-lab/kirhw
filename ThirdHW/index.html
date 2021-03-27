@@ -5,20 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>ThhirdHW</title>
+    <title>ThirdHW</title>
 </head>
 <body>
+    <div class="popup-window">
+        <div class="popup-content">
+            <h3 class="popup-desc">Here you can change the range</h3>
+            <span class="popup-close">&times;</span>
+            <h4 class="popup-alert"></h4>
+            <div class="popup-inputs">
+                <input id="minRange" class="range" type="text" placeholder="lower">
+                <input id="maxRange" class="range" type="text" placeholder="upper">
+                <input class="attemps-input" type="text">
+            </div>
+            <div class="popup-buttons">
+                <button id="setRange">Set a New Range</button>
+                <button id="change-attemps">Change attempts</button>
+            </div>
+        </div>
+    </div>
     <div class="main">
         <h1>Guess number</h1>
         <div class="interface">
-            <p>Hi, I made a number from min to max of your range.<br>
-               Try to guess it in 5 attempts!</p>
-            <input type="text" class="genInput">
-            <button class="generate">Generate</button>
+            <p id="hello-words"></p>
+            <p class="temp-out"></p>
+            <input id="mainInput" type="text" class="genInput" disabled>
+            <input id="generate" class="generate" type="button" value="start"></button>
+            <p class="alerting"></p>
         </div> 
-        <button class="exit">EXIT</button> 
+        <button class="popup-open">CHANGE SETTINGS</button>
+        <button class="exit">STOP</button> 
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

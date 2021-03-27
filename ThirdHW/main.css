@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #03588C;
+    background-color: #272e35;
 }
 
 h1 {
@@ -28,9 +28,16 @@ button {
     width: 150px;
     height: 50px;
 
+    border-style: none;
     border-radius: 4px;
     border-color: none;
     background: #F24822;
+}
+
+input {
+    width: 150px;
+    height: 50px;
+    font-size: 35px;
 }
 
 .main {
@@ -45,31 +52,140 @@ button {
 }
 
 .interface {
-    padding-top: 120px;
+    padding-top: 100px;
+}
+
+.alerting {
+    width: 250px;
+    height: 20px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    color: red;
+    font-weight: bolder;
+}
+
+.temp-out {
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    padding-top: 40px;
+
+    text-align: center;
+    color: green;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .genInput {
-    margin-top: 120px;
+    margin: 0 auto;
+    margin-top: 80px;
 
-    width: 300px;
+    width: 303px;
     height: 50px;
 
+    border-style: none;
     border-radius: 4px;
 
-    font-size: 35px;
     text-align: center;
 }
 
 .generate {
+    margin: 0 auto;
     margin-top: 4px;
 
-    width: 304px;
+    width: 303px;
 
+    border-style: none;
+    border-radius: 4px;
+    border-color: none;
+    background: #F24822;
     text-transform: uppercase;
     font-size: 25px;
 }
 
+.popup-window {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin: auto;
+    padding-top: 400px;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border: 1px solid #888;
+    width: 370px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+.popup-desc {
+    height: 20px;
+    margin-left: 35px;
+
+    text-align: center;
+    text-transform: uppercase;
+    display: inline;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+.popup-close {
+    color: #aaa;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+    color: blaCK;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-alert {
+    height: 14px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.popup-inputs {
+    margin: 0 auto;
+    padding-left: 7px;
+    width: 320px;
+}
+
+.attemps-input {
+    display: none;
+    width: 308px;
+}
+
+.popup-buttons {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 305px;
+}
+
 .exit {
-    margin-top: 310px;
+    margin-top: 245px;
 }
 
