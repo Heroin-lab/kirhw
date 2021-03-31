@@ -1,9 +1,9 @@
 var previousResults = [];
-var min = 1;
-var max = 10;
+var min = 0;
+var max = 0;
 
-var minInput = document.querySelector('.lower-limit'),
-    maxInput = document.querySelector('.upper-limit'),
+var minInput = document.querySelector('.min-input'),
+    maxInput = document.querySelector('.max-input'),
     genButton = document.querySelector('.gen-button'),
     resButtton = document.querySelector('.res-button'),
     output = document.querySelector('.gen-out');
@@ -62,6 +62,6 @@ function addAlert(text) {
 
 function reset() {
     previousResults.length = 0;
-    output.innerHTML = 'Press Generate';
+    output.innerHTML = '';
     genButton.disabled = false;
 }

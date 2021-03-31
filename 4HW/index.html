@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bemStyle.css">
     <title>4hw</title>
 </head>
 <body>
     <div class="main">
-        <h1 class="h1">Randomizer</h1>
-        <p>Min</p>
-        <input class="min-input" type="text">
-        <p>Max</p>
-        <input class="max-input" type="text">
+        <h1 class="header">Randomizer</h1>
+        <div class="limit-select">
+            <p class="limit-select__desc">Min</p>
+            <input class="limit-select__input lower-limit" type="text" value="1">
+            <p class="limit-select__desc">Max</p>
+            <input class="limit-select__input upper-limit" type="text" value="10">
+        </div>
         <button class="gen-button">Generate</button>
-        <h3 class="gen-out"></h3>
+        <h3 class="gen-out">Press Generate</h3>
         <button class="res-button">Reset</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
