@@ -1,49 +1,19 @@
 * {
-    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #272e35;
 }
 
-h1 {
-    text-transform: uppercase;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 45px;
-}
-
-p {
-    text-transform: uppercase;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-button {
-    margin: 0 auto;
-
-    width: 150px;
-    height: 50px;
-
-    border-style: none;
-    border-radius: 4px;
-    border-color: none;
-    background: #F24822;
-}
-
-input {
-    width: 150px;
-    height: 50px;
-    font-size: 35px;
-}
-
 .main {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     padding: 100px 10px 40px 10px;
-    width: 500px;
+    max-width: 500px;
 
     text-align: center;
 
@@ -51,116 +21,138 @@ input {
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
 }
 
+.main__header {
+    text-transform: uppercase;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+}
+
 .interface {
-    padding-top: 100px;
+    margin-top: 100px;
+}
+
+.interface__text {
+    text-transform: uppercase;
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.temp-out {
+    height: 38px;
+    padding-top: 40px;
+
+    color: green;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .alerting {
-    width: 250px;
-    height: 20px;
-    margin: 0 auto;
+    height: 38px;
     padding-top: 20px;
 
     color: red;
     font-weight: bolder;
 }
 
-.temp-out {
-    width: 300px;
-    height: 30px;
-    margin: 0 auto;
-    padding-top: 40px;
-
-    text-align: center;
-    color: green;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.genInput {
-    margin: 0 auto;
+.interface__genInput {
+    padding: 4px 0 4px 0;
+    max-width: 300px;
     margin-top: 80px;
 
-    width: 303px;
-    height: 50px;
-
     border-style: none;
     border-radius: 4px;
 
+    font-size: 35px;
     text-align: center;
 }
 
-.generate {
-    margin: 0 auto;
-    margin-top: 4px;
+.main--button-style {
+    padding: 10px 5px 10px 5px;
+    min-width: 150px;
 
-    width: 303px;
-
-    border-style: none;
     border-radius: 4px;
+    border-style: none;
     border-color: none;
+    outline: none;
     background: #F24822;
     text-transform: uppercase;
+}
+
+.main--button-style:hover {
+    box-shadow: 0 0 4px grey;
+}
+
+.main--button-style:nth-child(1):disabled{
+    background-color: grey;
+}
+
+.interface__generate {
+    min-width: 300px;
+    margin-top: 5px;
+
     font-size: 25px;
 }
 
 .popup-window {
     display: none;
     position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    margin: auto;
-    padding-top: 400px;
+    top: 0px; bottom: 0px;
+	left: 0px; right: 0px;
+	z-index: 100;
     overflow: auto;
+
     background-color: rgb(0, 0, 0);
     background-color: rgba(0,0,0,0.4);
 }
 
 .popup-content {
-    position: relative;
-    background-color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding: 15px;
+
+    background-color: #fefefe;
+
     border: 1px solid #888;
-    width: 370px;
-    height: 150px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
 }
 
-.popup-desc {
-    height: 20px;
-    margin-left: 35px;
+.popup-header {
+    display: flex;
+}
 
-    text-align: center;
+.popup-header__desc {
+    margin: 20px 0 0 25px;
     text-transform: uppercase;
-    display: inline;
 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
+.popup-header__close-button {
+    position: relative;
+    left: 55px; bottom: 20px;
+    color: rgb(255, 255, 255);
 
-.popup-close {
-    color: #aaa;
-    font-size: 32px;
+    font-size: 48px;
     font-weight: bold;
-    margin-left: auto;
 }
 
-.popup-close:hover,
-.popup-close:focus {
+.popup-header__close-button:hover,
+.popup-header__close-button:focus {
     color: blaCK;
     text-decoration: none;
     cursor: pointer;
 }
 
 .popup-alert {
-    height: 14px;
+    min-height: 14px;
 
-    text-align: center;
     text-transform: uppercase;
     color: red;
 
@@ -168,24 +160,32 @@ input {
     font-size: 12px;
 }
 
-.popup-inputs {
-    margin: 0 auto;
-    padding-left: 7px;
-    width: 320px;
+.popup-inputs__decoration {
+    max-width: 150px;
+
+    font-size: 35px;
+}
+
+.content--focus-outline:focus {
+    outline: 1px solid grey;
+}
+
+.popup-inputs__decoration:nth-child(1) {
+    border-color: green;
+}
+.popup-inputs__decoration:nth-child(2) {
+    border-color: red;
 }
 
 .attemps-input {
     display: none;
-    width: 308px;
+    max-width: 303px;
 }
 
 .popup-buttons {
-    padding-top: 10px;
-    margin: 0 auto;
-    width: 305px;
+    padding: 10px 0 15px 0;
 }
 
-.exit {
-    margin-top: 245px;
+.extra-buttons {
+    margin-top: 295px;
 }
-

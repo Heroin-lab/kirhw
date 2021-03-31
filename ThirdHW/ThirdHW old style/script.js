@@ -20,7 +20,7 @@ var attempInput = document.querySelector('.attemps-input');
 var popupStart = document.querySelector('.popup-open');
 var popupAlert = document.querySelector('.popup-alert');
 var popupWindow = document.querySelector('.popup-window');
-var popupEnd = document.querySelector('.popup-header__close-button');
+var popupEnd = document.querySelector('.popup-close');
 var shutdown = document.querySelector('.exit');
 
 setRange.addEventListener('click', setNewRange);
@@ -119,14 +119,14 @@ function compare() {
 
 function hotCold(heat) {
     if (hoter >= 1) {
-        heat > lastHeat ? alerting.innerHTML = 'Wrong \n Colder' : alerting.innerHTML = 'Wrong \n Warmer';
+        heat > lastHeat ? alerting.innerHTML = 'Wrong Colder' : alerting.innerHTML = 'Wrong Warmer';
         lastHeat = heat;
     } else if (colder >= 1) {
-        heat > lastHeat ? alerting.innerHTML = 'Wrong \n Colder' : alerting.innerHTML = 'Wrong \n Warmer';
+        heat > lastHeat ? alerting.innerHTML = 'Wrong Colder' : alerting.innerHTML = 'Wrong Warmer';
         lastHeat = heat;
     } 
         if (trys == guesses - 1) {
-            alerting.innerHTML = 'You guessed wrong! Try again!';
+            alerting.innerHTML = 'You guessed wrong';
         }
 }
 
@@ -155,7 +155,7 @@ function attempChanger() {
     } else if (attempMod === false) {
         minRange.style.display = "none";
         maxRange.style.display = "none";
-        attempInput.style.display = "flex";
+        attempInput.style.display = "block";
         attempInput.placeholder = guesses;
         attempMod = true;
     } else if (attempInput.value < 1) {
@@ -179,7 +179,7 @@ function alertCleaner() {
 }
 
 function popupOpen() {
-    popupWindow.style.display = "flex";
+    popupWindow.style.display = "block";
 }
 
 function popupClose() {
