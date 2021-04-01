@@ -30,3 +30,54 @@
 
 // 3 task \\
 
+// var arr = [
+//     {title: 'Some title'}, 
+//     {title: 'I like JS'}, 
+//     {nonTitle: 'This obj doesn’t have key title js'},
+//     {title: 'Js - is the best!'}
+// ];
+
+// function findTitle(arr, str) {
+//     str = str.toLowerCase();
+//     var arrBuffer = [];
+//     for(var i=0; i<arr.length; i++){
+//             if(arr[i].hasOwnProperty('title') && arr[i].title.toLowerCase().includes(str)){
+//                 arrBuffer.push(arr[i]);
+//             }
+//     }
+//     arr = arrBuffer
+//     return arr
+// }
+
+// console.log(findTitle(arr, 'js')); 
+
+
+//////////////////////////////
+
+
+// var array = [
+//     {title: 'Some title'}, 
+//     {title: 'I like JS'}, 
+//     {nonTitle: 'This obj doesn’t have key title js'},
+//     {js: 'test another props2'},
+//     {nonTitle: 'This obj'},
+//     {title: 'Js - is the best!'},
+//     {js: 'test another props'},
+// ];
+
+// function findCorrectProp(arr, titleName) {
+//     objStorage = [];
+//     titleName = titleName.toLowerCase();
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i].hasOwnProperty(titleName)) {
+//             objStorage.push(arr[i]);
+//         }
+//     }
+//     arr = objStorage;
+//     return arr;
+// }
+
+// console.log(findCorrectProp(array, 'js'));
+
+// 4 task \\
+
