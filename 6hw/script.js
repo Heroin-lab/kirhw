@@ -81,3 +81,19 @@
 
 // 4 task \\
 
+// function countCharacters(string) {
+//     var result = {};
+//     string = string.toLowerCase();
+//     for (var i = 0; i < string.length; i++){
+//         if (result[string[i]] = result[string[i]]){
+//             result[string[i]] += 1;
+//         } else {
+//             result[string[i]] = 1;
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(countCharacters('wtfq weqwe'));
+
+// 5 task \\
