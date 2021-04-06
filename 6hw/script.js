@@ -97,3 +97,27 @@
 // console.log(countCharacters('wtfq weqwe'));
 
 // 5 task \\
+
+// var number = 15563;
+
+// function nextPalindrome(num) {
+//     while (true) {
+//         if (isPalindrome(num) === true){
+//             return num;
+//         }
+//         num++;
+//     }
+// }
+
+// function isPalindrome(catchNum) {
+//     catchNum = String(catchNum);
+//     var a = Math.floor(catchNum.length/2);
+//     for (var  i = 0; i < a; i++) {
+//         if (catchNum[i] !== catchNum[catchNum.length - i - 1]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// console.log(nextPalindrome(number));
