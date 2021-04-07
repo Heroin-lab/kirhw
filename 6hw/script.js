@@ -120,4 +120,4 @@
 //     return true;
 // }
 
-// console.log(nextPalindrome(number));
+console.log(nextPalindrome(number));
