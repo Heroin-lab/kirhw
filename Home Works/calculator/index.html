@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>kirillCalc</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calc">
+            <div class="calc__item calc__input"><input class="calc__main-input" type="number" readonly></div>
+            <div class="calc__item calc__clearAll" onclick="clearInput()">С</div>
+            <div class="calc__item calc__del" onclick="deleteOne()">&larr;</div>
+            <div class="calc__item calc_color-orange" onclick="addSign('+')">&divide;</div>
+            <div class="calc__item" onclick="addNum(7)">7</div>
+            <div class="calc__item" onclick="addNum(8)">8</div>
+            <div class="calc__item" onclick="addNum(9)">9</div>
+            <div class="calc__item calc_color-orange" onclick="addSign('&times')">&times;</div>
+            <div class="calc__item" onclick="addNum(4)">4</div>
+            <div class="calc__item" onclick="addNum(5)">5</div>
+            <div class="calc__item" onclick="addNum(6)">6</div>
+            <div class="calc__item calc_color-orange" onclick="addSign('-')">-</div>
+            <div class="calc__item" onclick="addNum(1)">1</div>
+            <div class="calc__item" onclick="addNum(2)">2</div>
+            <div class="calc__item" onclick="addNum(3)">3</div>
+            <div class="calc__item calc_color-orange" onclick="addSign('+')">+</div>
+            <div class="calc__item calc__zero" onclick="addNum(0)">0</div>
+            <div class="calc__item">.</div>
+            <div class="calc__item calc__equal calc_color-orange" onclick="equal()">=</div>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
