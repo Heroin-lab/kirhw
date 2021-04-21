@@ -32,6 +32,8 @@
     align-items: center;
     height: 95px;
 
+    border:none;
+    outline: none;
     background-color: rgba(39, 255, 226, 0.5);
     color: rgb(80, 80, 80);
     font-size: 24px;
@@ -40,19 +42,33 @@
 
 .calc__input {
     max-width: 100%;
+    background-color: transparent;
     grid-column: 1/-1;
     padding: 0;
     border-radius: 15px 15px 0 0;
 }
 
-.calc__input input{
+.calc__input .calc__main-input {
     width: 100%;
-    height: 100%;
+    height: 70px;
+    margin-top: 30px;
     border: none;
     font-size: 32px;
     outline: none;
     text-align: right;
     border-radius: 15px 15px 0 0;
+}
+
+.calc__output {
+    grid-column: 1/-1;
+    padding: 0 15px 10px 0;
+    text-align: right;
+    font-size: 34px;
+    background-color: rgb(255, 255, 255);
+}
+
+.calc__output_color {
+    color: rgb(255, 255, 255);
 }
 
 .calc__clearAll {
