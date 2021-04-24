@@ -10,47 +10,23 @@
 <body>
     <div class="container">
         <div class="calc">
-            <div class="calc__item calc__input"><input class="calc__main-input" type="text" value="0" readonly></div>
+            <div class="calc__item calc__input"><input class="calc__main-input" type="text" readonly></div>
             <div class="calc__output"><output class="calc__main-output calc__output_color" name="result">0</output></div>
-
-            <div class="calc__item" onclick="operator()">deg</div>
-            <div class="calc__item" onclick="insert()">sin</div>
-            <div class="calc__item" onclick="insert()">cos</div>
-            <div class="calc__item" onclick="insert('')">tg</div>
-            <div class="calc__item" onclick="insert('')">ctg</div>
-
-            <div class="calc__item" onclick="operator()">X<span class="calc_upper-right">y</span></div>
-            <div class="calc__item" onclick="insert()">lg</div>
-            <div class="calc__item" onclick="insert()">In</div>
-            <div class="calc__item" onclick="insert('(')">(</div>
-            <div class="calc__item" onclick="insert(')')">)</div>
-
-            <div class="calc__item" onclick="operator()">Sqr(x)</div>
             <div class="calc__item calc__clearAll" onclick="clearAll()">С</div>
             <div class="calc__item calc__del" onclick="backspace()">&larr;</div>
-            <div class="calc__item" onclick="percent()">%</div>
             <div class="calc__item calc_color-orange" onclick="operator('/')">&divide;</div>
-
-            <div class="calc__item" onclick="operator()">&radic;X</div>
             <div class="calc__item" onclick="insert('7')">7</div>
             <div class="calc__item" onclick="insert('8')">8</div>
             <div class="calc__item" onclick="insert('9')">9</div>
             <div class="calc__item calc_color-orange" onclick="operator('*')">&times;</div>
-
-            <div class="calc__item" onclick="factor()">X!</div>
             <div class="calc__item" onclick="insert('4')">4</div>
             <div class="calc__item" onclick="insert('5')">5</div>
             <div class="calc__item" onclick="insert('6')">6</div>
             <div class="calc__item calc_color-orange"onclick="operator('-')">-</div>
-            
-            <div class="calc__item" onclick="operator()">1/X</div>
             <div class="calc__item" onclick="insert('1')">1</div>
             <div class="calc__item" onclick="insert('2')">2</div>
             <div class="calc__item" onclick="insert('3')">3</div>
             <div class="calc__item calc_color-orange" onclick="operator('+')">+</div>
-
-            <div class="calc__item calc__pi" onclick="Pi()">&#960;</div>
-            <div class="calc__item" onclick="E()">e</div>
             <div class="calc__item calc__zero" onclick="insert('0')">0</div>
             <div class="calc__item" onclick="insert('.')">.</div>
             <div class="calc__item calc__equal calc_color-orange" onclick="equal()">=</div>
