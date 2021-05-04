@@ -7,6 +7,7 @@ var AList = function (capacity) {
     this.DEFAULT_CAPACITY = 10;
     this.array = (() => {
         if (!this.capacity) {
+            this.capacity = 10;
             return new Array(this.DEFAULT_CAPACITY);
         } else if (typeof this.capacity === "number") {
             return new Array(this.capacity);
@@ -82,7 +83,7 @@ AList.prototype.add = function(value) {
 };
 AList.prototype.set = function(value, index) { //
     if (index < 0 || index > this.array.length - 1) {
-        throw new Error("ArrayIndexOutBoundsException");
+        return 'ArrayIndexOutBoundsException';
     }
     if (!this.array[index]) {
         this.array[index] = value;
@@ -92,9 +93,15 @@ AList.prototype.set = function(value, index) { //
     }
 };
 AList.prototype.get = function (index) {
+    if (index < 0 || index > this.array.length - 1) {
+        return 'ArrayIndexOutBoundsException';
+    }
     return this.array[index];
 };
 AList.prototype.remove = function (value) {
+    if (value < 0 || value > this.array.length - 1) {
+        throw new Error("ArrayIndexOutBoundsException");
+    }
     var newArray = new Array (this.capacity);
     var flag = 0;
     var toReturn = 0;
@@ -164,6 +171,9 @@ AList.prototype.maxIndex = function () {
     return index;
 };
 AList.prototype.retainAll = function (array) {
+    if (array === undefined || array.length === 0){
+        return 'Nothing to delete! Argument array is empty!';
+    }
     size = this.size;
     oldArray = this.array;
     this.array = new Array (this.capacity);
@@ -177,6 +187,9 @@ AList.prototype.retainAll = function (array) {
     this.size = size;
 };
 AList.prototype.removeAll = function (array) {
+    if (array === undefined || array.length === 0){
+        return 'Nothing to delete! Argument array is empty!';
+    }
     flag = false;
     size = this.size;
     oldArray = this.array;
@@ -202,9 +215,11 @@ AList.prototype.print = function () {
 };
 
 var list = new AList([1, 1, 3, 3, 5, 6, 7, 8]);
-var newList = new AList(20);
+var newList = new AList();
 
-// list.halfReverse();
-console.log(list);
+// newList.add(6)
+// newList.add(6)
+// newList.add(6)
+console.log(list.toString());
 
 module.exports = AList;
