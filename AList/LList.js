@@ -35,16 +35,47 @@ LList.prototype.add = function (value) {
     }
 };
 
-LList.prototype.toArray = function () {
-    var array = new Array(this.size);
-    var index = 0;
+LList.prototype.set = function (value, index) {
+    if (this.size < index || index < 0 || this.root === null) {
+        return 'Error'
+    } 
+    var counter = 0;
     var tempNode = this.root;
-    while (tempNode !== null) {
-        array[index++] = tempNode.value;
+    while (counter !== index) {
+      tempNode = tempNode.next;
+      counter++;
+    }
+    tempNode.value = value;
+    return tempNode;
+}
+
+LList.prototype.get = function (value) {
+    if (value === undefined) {
+        return 'Error: Cannot work without argument value!'
+    }
+    var tempNode = this.root;
+    while (tempNode.value !== value) {
+        if (tempNode.next === null) {
+            return 'Error: Argument value is not found!'
+        }
+        tempNode = tempNode.next 
+    }
+    return tempNode;
+}
+
+LList.prototype.toString = function () {
+    if (this.root === null){
+        return 'Error: Empty collection!'
+    }
+    counter = 0;
+    output = '';
+    tempNode = this.root;
+    while (tempNode !== null){
+        output += tempNode.value
         tempNode = tempNode.next;
     }
-    return array;
-};
+    return output;
+}
 
 LList.prototype.remove = function (value) {
     if (this.root === null) {
@@ -68,5 +99,132 @@ LList.prototype.remove = function (value) {
         }
     }
 };
+
+LList.prototype.toArray = function () {
+    var array = new Array(this.size);
+    var index = 0;
+    var tempNode = this.root;
+    while (tempNode !== null) {
+        array[index++] = tempNode.value;
+        tempNode = tempNode.next;
+    }
+    return array;
+};
+
+LList.prototype.contains = function (value) {
+    if (this.root === null) {
+        return 'Error: Empty collection!'
+    }
+    var tempNode = this.root;
+    while (tempNode.value !== value) {
+        if (tempNode.next === null) {
+            return false
+        }
+        tempNode = tempNode.next 
+    }
+    return true;
+}
+
+LList.prototype.minValue = function () {
+    if (this.root === null) {
+        return 'Error: Empty collection!'
+    }
+    var tempNode = this.root;
+    var minResult = tempNode.value;
+    while (tempNode !== null) {
+        tempNode.value < minResult ? minResult = tempNode.value : minResult;
+        tempNode = tempNode.next;
+    }
+    return minResult;
+}
+
+LList.prototype.maxValue = function () {
+    if (this.root === null) {
+        return 'Error: Empty collection!'
+    }
+    var tempNode = this.root;
+    var maxResult = tempNode.value;
+    while (tempNode !== null) {
+        tempNode.value > maxResult ? maxResult = tempNode.value : maxResult;
+        tempNode = tempNode.next;
+    }
+    return maxResult;
+}
+
+LList.prototype.minIndex = function () {
+    if (this.root === null) {
+        return 'Error: Empty collection!'
+    }
+    indexCounter = 0;
+    result = 0;
+    var tempNode = this.root;
+    var minResult = tempNode.value;
+    while (tempNode !== null) {
+        if (tempNode.value < minResult){
+            minResult = tempNode.value;
+            result = indexCounter;
+        }
+        indexCounter++;
+        tempNode = tempNode.next;
+    }
+    return result;
+}
+
+LList.prototype.maxIndex = function () {
+    if (this.root === null) {
+        return 'Error: Empty collection!'
+    }
+    indexCounter = 0;
+    result = 0;
+    var tempNode = this.root;
+    var maxResult = tempNode.value;
+    while (tempNode !== null) {
+        if (tempNode.value > maxResult){
+            maxResult = tempNode.value;
+            result = indexCounter;
+        }
+        indexCounter++;
+        tempNode = tempNode.next;
+    }
+    return result;
+}
+
+LList.prototype.reverse = function () {
+    
+}
+
+LList.prototype.halfReverse = function () {
+
+}
+
+LList.prototype.retainAll = function (array) {
+
+}
+
+LList.prototype.removeAll = function (array) {
+
+}
+
+LList.prototype.sort = function () {
+
+}
+
+LList.prototype.print = function () {
+    var string = '';
+    var tempNode = this.root;
+    while (tempNode !== null) {
+      string += tempNode.value;
+      tempNode = tempNode.next;
+    }
+    string += 'empty';
+    return string
+};
+
+var trash = new LList()
+trash.add(1)
+trash.add(2)
+trash.add(3)
+trash.add(4)
+console.log(trash.reverse());
 
 module.exports = LList;
