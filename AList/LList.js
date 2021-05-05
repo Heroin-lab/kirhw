@@ -190,15 +190,34 @@ LList.prototype.maxIndex = function () {
 }
 
 LList.prototype.reverse = function () {
-    
+    tempNode = this.root;
+    next = null;
+    prev = null;
+    while (tempNode !== null) {     // { value: 1, next: { value: 2, next: { value: 3, next: {value: 4, next: null} } } }
+        next = tempNode.next;       // next === { value: 2, next: { value: 3, next: {value: 4, next: null} } } 
+        tempNode.next = prev;       // tempNode.next === {value: 1, next: null}
+        prev = tempNode;            // prev === {value: 1, next: null}
+        tempNode = next;            // tempNode === { value: 2, next: { value: 3, next: {value: 4, next: null} } }
+    }
+    return prev;
 }
 
 LList.prototype.halfReverse = function () {
-
+    var arr = this.toArray();
+    tempNode = this.root;
+    half = Math.floor(arr.length/2);
+    for (var i = 0; i < arr.length; i++) {
+        if (i < half) {
+            tempNode.value = (arr[i + half])
+        } else {
+            tempNode.value = (arr[i - half])
+        }
+        tempNode = tempNode.next;
+    }
+    return this.root;
 }
 
 LList.prototype.retainAll = function (array) {
-
 }
 
 LList.prototype.removeAll = function (array) {
@@ -225,6 +244,8 @@ trash.add(1)
 trash.add(2)
 trash.add(3)
 trash.add(4)
-console.log(trash.reverse());
+trash.add(5)
+trash.add(6)
+console.log(trash.retainAll([2, 4, 6]));
 
 module.exports = LList;
